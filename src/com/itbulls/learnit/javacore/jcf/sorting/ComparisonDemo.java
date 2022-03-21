@@ -32,6 +32,8 @@ public class ComparisonDemo {
 		System.out.println("===== Products =====");
 		
 		List<Product> products = DefaultProductManagementService.getInstance().getProducts();
+		printProductsInNewLine(products);
+		
 		
 
 	}
