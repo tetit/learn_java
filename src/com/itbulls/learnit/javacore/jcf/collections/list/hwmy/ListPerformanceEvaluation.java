@@ -1,10 +1,58 @@
-package com.itbulls.learnit.javacore.jcf.collections.list.hw;
+package com.itbulls.learnit.javacore.jcf.collections.list.hwmy;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ListPerformanceEvaluation {
+	
+	private static void fillOutList(List<Integer> list, int amountOfElements) {
+		for (int i = 0; i < amountOfElements; i++) {
+			list.add(i);
+		}
+	}
+
+	public static void addElementsToBeginning(List<Integer> list,
+			int numberOfElementsToAdd) {
+		for (int i =0; i < numberOfElementsToAdd; i++) {
+			list.add(0, i);
+		}
+	}
+
+	public static void addElementsToMiddle(List<Integer> list,
+			int numberOfElementsToAdd) {
+		for (int i =0; i < numberOfElementsToAdd; i++) {
+			list.add(list.size()/2, i);
+		}
+	}
+
+	public static void addElementsToEnd(List<Integer> list, int numberOfElementsToAdd) {
+		for (int i =0; i < numberOfElementsToAdd; i++) {
+			list.add(i);
+		}
+	}
+
+	public static void removeElementsFromBeginning(List<Integer> list,
+			int numberOfElementsToRemove) {
+		for (int i =0; i < numberOfElementsToRemove; i++) {
+			list.remove(0);
+		}
+	}
+
+	public static void removeElementsFromMiddle(List<Integer> list,
+			int numberOfElementsToRemove) {
+		for (int i =0; i < numberOfElementsToRemove; i++) {
+			list.remove(list.size()/2);
+		}
+		
+	}
+
+	public static void removeElementsFromEnd(List<Integer> list,
+			int numberOfElementsToRemove) {
+		for (int i =0; i < numberOfElementsToRemove; i++) {
+			list.remove(list.size()-1);
+		}
+	}
 
 	public static void main(String[] args) {
 		List<Integer> arrayList = new ArrayList<>();
@@ -353,52 +401,6 @@ public class ListPerformanceEvaluation {
 
 	}
 
-	private static void fillOutList(List<Integer> list, int amountOfElements) {
-		for (int i = 0; i < amountOfElements; i++) {
-			list.add(i);
-		}
-	}
-
-	public static void addElementsToBeginning(List<Integer> list,
-			int numberOfElementsToAdd) {
-		for (int i = 0; i < numberOfElementsToAdd; i++) {
-			list.add(0, Integer.MAX_VALUE);
-		}
-	}
-
-	public static void addElementsToMiddle(List<Integer> list,
-			int numberOfElementsToAdd) {
-		for (int i = 0; i < numberOfElementsToAdd; i++) {
-			list.add(list.size() / 2, Integer.MAX_VALUE);
-		}
-
-	}
-
-	public static void addElementsToEnd(List<Integer> list, int numberOfElementsToAdd) {
-		for (int i = 0; i < numberOfElementsToAdd; i++) {
-			list.add(Integer.MAX_VALUE);
-		}
-	}
-
-	public static void removeElementsFromBeginning(List<Integer> list,
-			int numberOfElementsToRemove) {
-		for (int i = 0; i < numberOfElementsToRemove; i++) {
-			list.remove(0);
-		}
-	}
-
-	public static void removeElementsFromMiddle(List<Integer> list,
-			int numberOfElementsToRemove) {
-		for (int i = 0; i < numberOfElementsToRemove; i++) {
-			list.remove(list.size() / 2);
-		}
-	}
-
-	public static void removeElementsFromEnd(List<Integer> list,
-			int numberOfElementsToRemove) {
-		for (int i = 0; i < numberOfElementsToRemove; i++) {
-			list.remove(list.size() - 1);
-		}
-	}
+	
 
 }

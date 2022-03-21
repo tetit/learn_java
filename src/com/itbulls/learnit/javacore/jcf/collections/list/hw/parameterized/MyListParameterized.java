@@ -1,6 +1,6 @@
-package com.itbulls.learnit.javacore.jcf.collections.list.hw;
+package com.itbulls.learnit.javacore.jcf.collections.list.hw.parameterized;
 
-public interface MyList extends Iterable<Object> {
+public interface MyListParameterized<T> extends Iterable<T> {
 	
     /**
      * Appends the specified element to the end of this list (optional
@@ -8,7 +8,7 @@ public interface MyList extends Iterable<Object> {
      *
      * @param e element to be appended to this list
      */
-	 void add(Object e);
+	 void add(T e);
 	 
 	/**
 	 * Removes all of the elements from this list.
@@ -77,5 +77,5 @@ public interface MyList extends Iterable<Object> {
 	 *         elements
 	 */
 	 
-	 boolean containsAll(MyList c); // returns true if this list contains all of the elements of the specified list
-	}
+	 boolean containsAll(MyListParameterized<?> c); // returns true if this list contains all of the elements of the specified list
+}

@@ -1,4 +1,4 @@
-package com.itbulls.learnit.javacore.jcf.collections.list.hw;
+package com.itbulls.learnit.javacore.jcf.collections.list.hwmy;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
  *
  */
 
-public class DefaultMyList implements MyList, ListIterable {
+public class DefaultMyList implements MyList {
 
 	/**
      * Pointer to first node.
@@ -283,7 +283,7 @@ public class DefaultMyList implements MyList, ListIterable {
      * @return an iterator over the elements in this list (in proper sequence)
      */
 	
-	@Override
+	
 	public Iterator<Object> iterator() {
 		return new IteratorImpl();
 	}
@@ -323,7 +323,7 @@ public class DefaultMyList implements MyList, ListIterable {
 	 * 
 	 * @return object of ListIterator
 	 */
-	
+
 	@Override
 	public ListIterator listIterator() {
 		return new ListIteratorImpl();
@@ -517,7 +517,3 @@ public class DefaultMyList implements MyList, ListIterable {
 
 
 }
-
-	
-
-
