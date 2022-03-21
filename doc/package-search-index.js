@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.itbulls.learnit.javacore.arrays"},{"l":"com.itbulls.learnit.javacore.javadoc"},{"l":"com.itbulls.learnit.javacore.numbersystems"},{"l":"com.itbulls.learnit.javacore.primitives"},{"l":"com.itbulls.tymoshchuk"}];updateSearchResults();
