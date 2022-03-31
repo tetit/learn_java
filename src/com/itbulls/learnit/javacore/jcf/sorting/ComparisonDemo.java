@@ -32,7 +32,54 @@ public class ComparisonDemo {
 		System.out.println("===== Products =====");
 		
 		List<Product> products = DefaultProductManagementService.getInstance().getProducts();
+		printProductsInNewLine(products);
+//		products.sort(Comparator.naturalOrder()); // compilation error in case Product is not Comparable
+
 		
+		// === Demo - Sorting Products (type that implements Comparable)
+		
+		ComparableProduct cp1 = new ComparableProduct(1, "Product 1", "Category 2", 310);
+		ComparableProduct cp2 = new ComparableProduct(2, "Product 2", "Category 1", 200);
+		ComparableProduct cp3 = new ComparableProduct(3, "Product 3", "Category 2", 259);
+		
+		List<ComparableProduct> comparableProducts = new ArrayList<>(Arrays.asList(cp3, cp1, cp2));
+		
+		comparableProducts.sort(Comparator.naturalOrder());
+		
+		System.out.println("========== Comparable products - SORTED");
+		printProductsInNewLine(comparableProducts);
+		
+		// === Demo - Comparator implementation
+		
+		/*
+		 * We can implement comparator in four ways:
+		 * 
+		 * 1. Anonymous class
+		 * 2. Separate class
+		 * 3. Lambda expression
+		 * 4. Method reference
+		 * 
+		 */
+		
+		products.sort(new Comparator<Product>() {
+			@Override
+			public int compare(Product product1, Product product2) {
+				return product1.getProductName().compareTo(product2.getProductName());
+			}
+		});
+		
+		products.sort(new ProductNameComparator());
+		
+		System.out.println("============== Comparator demo - Sorted Products");
+		printProductsInNewLine(products);
+		
+	}
+		
+		public static void printProductsInNewLine(List<? extends Product> products) {
+			for (Product product : products) {
+				System.out.println(product);
+			}
+		}
 
 	}
 	
@@ -43,5 +90,6 @@ public class ComparisonDemo {
 			return product1.getProductName().compareTo(product2.getProductName());
 		}
 
+
 }
-}
+ 

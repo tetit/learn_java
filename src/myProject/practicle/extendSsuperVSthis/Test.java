@@ -1,4 +1,4 @@
-package myProject.practicle.superVSthis;
+package myProject.practicle.extendSsuperVSthis;
 
 public class Test {
 

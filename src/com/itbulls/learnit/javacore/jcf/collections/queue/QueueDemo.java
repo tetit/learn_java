@@ -17,7 +17,8 @@ public class QueueDemo {
 		queue.offer(3);
 		queue.offer(1);
 		queue.offer(10);
-
+		
+		
 		System.out.println("Get head of the queue and remove element: " 
 								+ queue.poll());
 
@@ -25,6 +26,7 @@ public class QueueDemo {
 								+ queue.size());
 		
 		System.out.println("peek(): " + queue.peek());
+	
 		
 		System.out.println("Size of the queue after peek(): " 
 								+ queue.size());
