@@ -9,10 +9,9 @@ public class TestSuper {
 }
 	
 class TestSub extends TestSuper {
-//	public TestSub() {
-//		super(0);
-//	}
 	
+	 public TestSub() { super(0); }
+	 
 }
 
 
