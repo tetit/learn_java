@@ -33,6 +33,7 @@ public class ComparisonDemo {
 		
 		List<Product> products = DefaultProductManagementService.getInstance().getProducts();
 		printProductsInNewLine(products);
+    
 //		products.sort(Comparator.naturalOrder()); // compilation error in case Product is not Comparable
 
 		
@@ -60,6 +61,7 @@ public class ComparisonDemo {
 		 * 4. Method reference
 		 * 
 		 */
+
 		
 		products.sort(new Comparator<Product>() {
 			@Override
