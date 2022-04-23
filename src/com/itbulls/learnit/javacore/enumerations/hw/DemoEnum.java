@@ -19,7 +19,8 @@ public class DemoEnum {
 						+ "message type. Only 'A', 'B', 'C' or 'D' are allowed");
 				continue;
 			}
-
+			
+			
 		}
 
 	}
