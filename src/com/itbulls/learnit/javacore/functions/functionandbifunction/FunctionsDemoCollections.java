@@ -21,8 +21,9 @@ public class FunctionsDemoCollections {
 		System.out.println("======== Function type demo ======");
 		System.out.println("map.get(4): " + map.get(4));
 		map.computeIfAbsent(4, key -> Integer.toString(key));
+		map.computeIfAbsent(7, num -> Integer.toString(num));
 		System.out.println("map.get(4): " + map.get(4));
-		System.out.println("map.get(1): " + map.get(1));
+		System.out.println("map.get(7): " + map.get(7));
 
 		map.computeIfAbsent(5, FunctionsDemoCollections::convertIntToString);
 		System.out.println("map.get(5): " + map.get(5));
