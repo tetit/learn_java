@@ -55,5 +55,24 @@ public class SpinWords {
 
 		return sbInsert.toString();
 	}
+	
+	public String spinWords1(String sentance) {
+		String[] words = sentance.split(" ");
+		for (int i=0; i<words.length; i++) {
+			if(words[i].length() >= 5) {
+				words[i] = new StringBuilder(words[i]).reverse().toString();
+				}
+		}
+		return String.join(" ", words);
+	}
+	
+	public String spinWords2(String sentance) {
+		for (String a : sentance.split(" ")) {
+			if (a.length() > 4) {
+				sentance = sentance.replace(a, new StringBuffer(a).reverse());
+			}
+		}
+		return sentance;
+	}
 
 }
