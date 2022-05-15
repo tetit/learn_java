@@ -20,9 +20,9 @@ public class ListDemo {
 		list2.add("another string2");
 		//list2.add(1);
 		Object object1 = list2.get(0);
-		String string = list2.get(0);
-		System.out.println(object);
-		System.out.println(string);
+		String string = list2.get(1);
+		System.out.println(object1 + " object1");
+		System.out.println(string + " string");
 		
 		list2 = new LinkedList<>();
 		list2.add("another string");
